@@ -1,0 +1,71 @@
+@import '_variable',
+'compass/css3/flexbox';
+.feature-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 13%;
+    padding-right: 13%;
+    .feature {
+        background-color: $color-background;
+        text-align: center;
+        @include flexbox((display: box, box-orient: vertical), $version: 1);
+        @include flexbox((display: flexbox, flex-direction: column), $version: 2);
+        @include flexbox((display: flex, flex-direction: column));
+        @include align-items(center);
+        .info-box {
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: top;
+            width: 90%;
+            margin: 25px 0;
+            @include flex(1 0);
+            img {
+                height: 100px;
+            }
+            h3 {
+                color: $color-b1;
+                font-size: 26px;
+                padding: 4.5px 0;
+                margin-top: 23px;
+                margin-bottom: 10px;
+                font-weight: 300
+            }
+            p {
+                margin: 0 auto;
+                line-height: 24px;
+                font-size: 14px;
+                font-weight: lighter;
+                color: $color-b2;
+            }
+        }
+        @media screen and (min-width: 750px) {
+            @include flexbox((display: box, box-orient: horizontal), $version: 1);
+            @include flexbox((display: flexbox, flex-direction: row), $version: 2);
+            @include flexbox((display: flex, flex-direction: row));
+            @include justify-content(center);
+            .info-box {
+                width: 220px;
+                margin-left: 10px;
+                margin-right: 10px;
+                vertical-align: top;
+                height: 266px;
+                p {
+                    width: 200px
+                }
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            width: 1000px;
+            margin: 0 auto;
+            .info-box {
+                width: 300px;
+                margin-left: 20px;
+                margin-right: 20px;
+                height: 100%;
+                p {
+                    width: 240px
+                }
+            }
+        }
+    }
+}

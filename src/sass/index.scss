@@ -1,0 +1,34 @@
+@import 'compass/reset',
+'components/modal',
+'components/toast',
+'components/btn',
+'components/form',
+'components/fonts',
+'components/base',
+'components/jumbotron',
+'components/banner',
+'components/feature',
+'components/footer';
+.modal_qr {
+    margin: 10% 10%;
+    margin-bottom: 14%;
+    text-align: center;
+    .modal-qr-text {
+        font-size: 16px;
+        color: $color-b2;
+        line-height: 22px;
+        padding: 3px 0;
+    }
+    .qr-downloasd-img {
+        margin: 28px 0 10px;
+        width: 54.8%;
+        padding: 20px;
+        @media screen and (min-width: $large) {
+            width: 234px;
+        }
+    }
+}
+
+.modal_form {
+    padding: 0 26px;
+}

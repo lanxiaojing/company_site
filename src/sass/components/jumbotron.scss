@@ -1,0 +1,107 @@
+@import 'variable',
+'compass/css3/border-radius',
+'compass/css3/box-sizing',
+'compass/typography/links/unstyled-link';
+.jumbotron-container {
+    background: -moz-linear-gradient(top, #0D3149 0%, #0C2239 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0D3149), color-stop(100%, #0C2239));
+    background: -webkit-linear-gradient(top, #0D3149 0%, #0C2239 100%);
+    background: -o-linear-gradient(top, #0D3149 0%, #0C2239 100%);
+    background: -ms-linear-gradient(top, #0D3149 0%, #0C2239 100%);
+    background: linear-gradient(to bottom, #0D3149 0%, #0C2239 100%);
+}
+
+.jumbotron {
+    text-align: center;
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 0 0 23.2% 0;
+    height: 370px;
+    .navbar {
+        width: 100%;
+        border-bottom: 1px solid rgba($color-c5, 0.5);
+        height: 74px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        @include box-sizing(border-box);
+        vertical-align: bottom;
+        img {
+            display: block;
+            height: 30px;
+        }
+        a {
+            @include unstyled-link()
+        }
+        .brand {
+            margin-top: 24px;
+            float: left;
+        }
+        .pull-left {
+            @include box-sizing(border-box);
+        }
+        .pull-right {
+            float: right;
+            color: $color-c5;
+            height: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 29px;
+        }
+        @media screen and (min-width: $middle) {
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 60px;
+            width: 80%;
+            margin: 0 auto;
+            .brand {
+                margin-top: 16px;
+            }
+            .pull-right {
+                margin-top: 21px;
+            }
+        }
+        @media screen and (min-width: $x_large) {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    }
+    .header {
+        color: $color-c5;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        font-size: 35px;
+        padding: 20px 0;
+        @media screen and (min-width: $middle) {
+            font-size: 70px;
+            padding: 14px 0;
+            margin-top: 104px;
+            margin-bottom: 12px;
+        }
+    }
+    .sub-header {
+        color: $color-c5;
+        font-weight: lighter;
+        margin-bottom: 30px;
+        font-size: 12px;
+        @media screen and (min-width: $middle) {
+            font-size: 16px;
+        }
+    }
+    .btn-container button:first-child {
+        margin-bottom: 10px;
+        @media screen and (min-width: $middle) {
+            margin-bottom: 0px;
+            margin-right: 20px;
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: $middle) {
+        background-size: cover
+    }
+    @media screen and (min-width: $middle) {
+        padding: 0 0 113px 0;
+        background-position: 50%;
+        height: 490px;
+    }
+}

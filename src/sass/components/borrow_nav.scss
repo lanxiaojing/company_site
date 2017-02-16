@@ -1,0 +1,19 @@
+@import 'components/variable';
+$color-borrowpage-nav: #11334A;
+nav {
+    background-color: $color-borrowpage-nav;
+    height: 30px;
+    text-align: center;
+    padding: 15px;
+    .title img {
+        width: 98px;
+        height: 30px
+    }
+    .icon {
+        color: $color-c5;
+        font-size: 36px;
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+}

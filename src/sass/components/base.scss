@@ -1,0 +1,26 @@
+@import '_variable',
+'compass/layout/sticky-footer';
+body {
+    font-family: 'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    background-color: $color-background;
+}
+
+@include sticky-footer(400px);
+@media screen and (min-width: $middle) {
+    @include sticky-footer(200px);
+}
+
+* {
+    outline: none;
+    &::focus {
+        outline: none;
+    }
+}
+
+.hidden {
+    display: none
+}
+
+.unvisible {
+    visibility: hidden
+}

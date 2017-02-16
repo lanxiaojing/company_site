@@ -1,0 +1,82 @@
+@import 'components/variable',
+'compass/css3/opacity',
+'compass/css3/border-radius',
+'compass/css3/box-shadow';
+$x_middle: 900px;
+.shade {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10012;
+}
+
+.close-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 75%;
+    margin: 0 auto;
+    top: 15%;
+    z-index: 1000;
+    .close {
+        position: relative;
+        float: right;
+        padding: 10px;
+        top: -16px;
+        font-size: 16px;
+        font-weight: lighter;
+        color: #979797;
+        right: 0 - 16px;
+        background: #fff;
+        @include border-radius(100%);
+        @include box-shadow(0px 0px 4px 0px rgba(0, 0, 0, .5));
+        @media screen and (min-width: $middle) {
+            position: relative;
+            float: right;
+            padding: 10px;
+            top: -20px;
+            font-size: 20px;
+            font-weight: lighter;
+            color: #979797;
+            right: 0 - 20px;
+            background: #fff;
+            @include border-radius(100%);
+            @include box-shadow(0px 0px 4px 0px rgba(0, 0, 0, .5));
+        }
+    }
+    @media screen and (min-width: $middle) {
+        width: 440px;
+    }
+}
+
+.modal-content {
+    position: fixed;
+    left: 0;
+    top: 15%;
+    bottom: 20%;
+    overflow: scroll;
+    right: 0;
+    width: 75%;
+    margin: 0 auto;
+    background-color: $color-background;
+    @include box-shadow(0px 0px 4px 0px rgba(0, 0, 0, .5));
+    @include border-radius(10px);
+    .btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    @media screen and (min-width: $middle) {
+        font-size: 16px;
+        width: 440px;
+    }
+    @media screen and (min-height: $x_middle) {
+        bottom: auto
+    }
+}
+
+.modal-content-mobile {
+    bottom: auto;
+}

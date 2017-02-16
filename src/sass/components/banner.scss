@@ -1,0 +1,93 @@
+@import 'variable',
+'compass/css3/border-radius',
+'compass/css3/box-sizing';
+$x_small: 370px;
+.banner {
+    background-color: $color-c5;
+    text-align: center;
+    color: $color-b2;
+    padding: 44px 10px;
+    .header {
+        color: black;
+        font-weight: lighter;
+        padding: 6px;
+        font-size: 30px;
+        @media screen and (min-width: $middle) {
+            font-size: 50px;
+            font-weight: 300;
+        }
+    }
+    .banner-text {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 25px;
+        font-weight: lighter;
+        @media screen and (min-width: $middle) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media screen and (min-width: $large) {
+            width: 800px;
+            margin: 0 auto 25px;
+        }
+    }
+    .blue-bar {
+        background-color: $color-a2;
+        width: 50px;
+        height: 4px;
+        margin: 20px auto 25px;
+        @media screen and (min-width: $middle) {
+            margin: 30px auto 40px;
+        }
+    }
+    .box-inline {
+        @include box-sizing(border-box);
+        display: block;
+        border: 1px $color-b3 solid;
+        @include border-radius(5px);
+        width: 80%;
+        padding: 9px 18px;
+        margin: 10px auto;
+        background-color: $color-c5;
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            padding: 3px 0;
+        }
+        @media screen and (max-width: $x_small) {
+            padding: 9px 6px;
+            width: 240px;
+            p {
+                font-size: 13px;
+            }
+        }
+        @media screen and (min-width: $small) {
+            padding: 9px;
+            p {
+                font-size: 16px;
+            }
+        }
+        @media screen and (min-width: $middle) {
+            width: 300px;
+            display: inline-block;
+            margin: 0 10px;
+            width: 300px;
+            padding: 9px 9px;
+            p {
+                font-size: 16px;
+            }
+        }
+        @media screen and (min-width: $large) {
+            width: 320px;
+            display: inline-block;
+            margin: 0 10px;
+            padding: 9px 18px;
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}

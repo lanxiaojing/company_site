@@ -1,0 +1,27 @@
+{
+    "name": "haojie",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "watch": "cd src && compass watch",
+        "build_sass": "cd src && compass compile --outstyle compressed",
+        "build": "grunt"
+    },
+    "keywords": [
+        "haojie"
+    ],
+    "author": "lanjing",
+    "license": "ISC",
+    "dependencies": {
+        "grunt": "^1.0.1",
+        "sass-lint": "*"
+    },
+    "devDependencies": {
+        "grunt-contrib-htmlmin": "^2.0.0",
+        "grunt-contrib-imagemin": "^1.0.1",
+        "grunt-contrib-uglify": "^2.0.0",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-clean": "^1.0.0"
+    }
+}

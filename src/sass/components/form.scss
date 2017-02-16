@@ -1,0 +1,128 @@
+@import 'components/variable',
+'compass/css3/border-radius',
+'compass/css3/box-sizing',
+'compass/css3/appearance',
+'compass/typography/links/unstyled-link';
+.form-container {
+    @include box-sizing(border-box);
+    background-color: $color-background;
+    padding: 0 10%;
+    text-align: left;
+    .form-title {
+        @include box-sizing(border-box);
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 32px;
+        padding: 4px auto;
+        color: $color-b2;
+        text-align: center;
+    }
+    .form-body {
+        @include box-sizing(border-box);
+        text-align: left;
+        .form-control {
+            .link {
+                cursor: pointer;
+                font-size: 14px;
+                padding: 3px 0;
+                line-height: 40px;
+            }
+            a {
+                @include unstyled-link;
+                color: $color-a2;
+            }
+            .active-link {
+                color: $color-a2;
+            }
+            .label-control {
+                font-size: 14px;
+                padding: 3px 0;
+                color: $color-b2;
+                margin-bottom: 10px;
+            }
+            .input-container {
+                .warning-text {
+                    @include box-sizing(border-box);
+                    height: 18px;
+                    font-size: 12px;
+                    padding: 3px;
+                    color: $color-c1;
+                }
+                .getCodeLink {
+                    float: right;
+                    border: 0px;
+                    background: inherit;
+                }
+                .captcha-img {
+                    width: 30%;
+                    height: 40px;
+                    float: right;
+                }
+                input,
+                select {
+                    @include box-sizing(border-box);
+                    width: 100%;
+                    height: 40px;
+                    font-size: 14px;
+                    padding: 10px;
+                    color: $color-b2;
+                    border: 1px solid $color-b3;
+                    background-color: $color-c5;
+                    @include border-radius(4px);
+                }
+                input[name=phoneCode],
+                input[name=captchaCode] {
+                    width: 63%;
+                }
+                input:focus,
+                select:focus {
+                    border: 1px solid $color-a2;
+                }
+                .required {
+                    border: 1px solid $color-c1;
+                }
+                .required:focus {
+                    border: 1px solid $color-c1;
+                }
+            }
+        }
+        input[type="checkbox"] {
+            @include box-sizing(border-box);
+            @include appearance(none);
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            border: 1px solid $color-b3;
+            background-color: $color-c5;
+            margin: 0;
+            margin-right: 10px;
+            padding: 0;
+        }
+        input[type="checkbox"]:checked {
+            background-image: url('../img/checked.png');
+            background-position: -1px 0;
+            border: 1px solid $color-c4;
+        }
+        .checkbox-container {
+            @include box-sizing(border-box);
+            position: relative;
+            top: -3px;
+            margin: 15px 0 38px;
+            font-size: 14px;
+            color: $color-b3;
+            line-height: 20px;
+            height: 20px;
+            vertical-align: middle;
+            .warning-text {
+                @include box-sizing(border-box);
+                font-size: 12px;
+                padding: 3px;
+                color: $color-c1;
+            }
+            .checkbox-label {
+                display: inline-block;
+                vertical-align: inherit;
+            }
+        }
+    }
+}
